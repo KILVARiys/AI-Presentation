@@ -1,0 +1,4 @@
+Библиотеки, которые используются для работы:
+pip install python-pptx
+pip install transformers
+pip install torch torchvision torchaudio
