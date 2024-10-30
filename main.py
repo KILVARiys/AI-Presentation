@@ -10,7 +10,7 @@ revision = "main"
 # Функция для генерации сводки
 def generate_summary(input_text):
     summarizer = pipeline("summarization", model=model_name, revision=revision)
-    summary = summarizer(input_text, max_length=150, min_length=30, do_sample=False)
+    summary = summarizer(input_text, max_length=80, min_length=20, do_sample=False)
     return summary[0]['summary_text']
 
 
@@ -34,7 +34,7 @@ def create_presentation(summary_text):
 # Основной код
 if __name__ == "__main__":
     # Входной текст
-    input_text = "Твой текст для создания презентации здесь. Проверочный текст"
+    input_text = "Basilio the cat checks the presentation for functionality"
 
     # Генерация сводки
     summary = generate_summary(input_text)
